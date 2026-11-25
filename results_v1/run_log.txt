@@ -1,0 +1,59 @@
+Python/torch/torchvision/sklearn: 2.14.1+cu126 0.29.1+cu126 1.9.1
+Device: cuda
+Split sizes: train=2944 val=736 test=3669
+  train: min=74 max=80 images per breed
+  val: min=19 max=20 images per breed
+  test: min=88 max=100 images per breed
+
+### full: trainable params = 1555781
+[full] epoch 1/10 loss=3.1623 val_acc=0.5598
+[full] epoch 2/10 loss=1.7217 val_acc=0.7541
+[full] epoch 3/10 loss=0.9519 val_acc=0.8071
+[full] epoch 4/10 loss=0.6809 val_acc=0.8397
+[full] epoch 5/10 loss=0.5324 val_acc=0.8519
+[full] epoch 6/10 loss=0.4294 val_acc=0.8533
+[full] epoch 7/10 loss=0.3665 val_acc=0.8573
+[full] epoch 8/10 loss=0.3003 val_acc=0.8682
+[full] epoch 9/10 loss=0.2620 val_acc=0.8655
+[full] epoch 10/10 loss=0.2289 val_acc=0.8750
+==> full: train_acc=0.9878 val_acc=0.8750 test_acc=0.8302 macroF1=0.8248
+    most confused: ['American Pit Bull Terrier -> Staffordshire Bull Terrier (22)', 'American Pit Bull Terrier -> American Bulldog (18)', 'American Pit Bull Terrier -> German Shorthaired (18)', 'Beagle -> Basset Hound (14)', 'Bengal -> Egyptian Mau (12)']
+
+### head: trainable params = 628773
+[head] epoch 1/10 loss=1.2054 val_acc=0.8302
+[head] epoch 2/10 loss=0.4715 val_acc=0.8519
+[head] epoch 3/10 loss=0.3348 val_acc=0.8614
+[head] epoch 4/10 loss=0.2853 val_acc=0.8682
+[head] epoch 5/10 loss=0.2161 val_acc=0.8736
+[head] epoch 6/10 loss=0.1888 val_acc=0.8723
+[head] epoch 7/10 loss=0.1586 val_acc=0.8791
+[head] epoch 8/10 loss=0.1326 val_acc=0.8764
+[head] epoch 9/10 loss=0.1295 val_acc=0.8750
+[head] epoch 10/10 loss=0.0954 val_acc=0.8736
+==> head: train_acc=0.9840 val_acc=0.8791 test_acc=0.8585 macroF1=0.8581
+    most confused: ['Birman -> Ragdoll (26)', 'American Pit Bull Terrier -> Staffordshire Bull Terrier (24)', 'Maine Coon -> Ragdoll (15)', 'Siamese -> Birman (15)', 'Pug -> Boxer (12)']
+
+### features: trainable params (torch) = 0
+Feature extraction done in 36.4s, shape (2944, 576)
+[logreg] C=0.01 val_acc=0.8764 (fit 0.4s)
+[logreg] C=0.1 val_acc=0.8668 (fit 0.7s)
+[logreg] C=1 val_acc=0.8560 (fit 0.3s)
+==> features_logreg: train_acc=0.9881 val_acc=0.8764 test_acc=0.8569 macroF1=0.8551
+    most confused: ['American Pit Bull Terrier -> Staffordshire Bull Terrier (18)', 'Birman -> Ragdoll (15)', 'Ragdoll -> Birman (15)', 'American Pit Bull Terrier -> American Bulldog (14)', 'English Cocker Spaniel -> English Setter (13)']
+[linear_svm] C=0.001 val_acc=0.8736 (fit 11.3s)
+[linear_svm] C=0.01 val_acc=0.8750 (fit 6.4s)
+[linear_svm] C=0.1 val_acc=0.8288 (fit 9.0s)
+==> features_linear_svm: train_acc=0.9990 val_acc=0.8750 test_acc=0.8340 macroF1=0.8314
+    most confused: ['American Pit Bull Terrier -> American Bulldog (17)', 'Ragdoll -> Birman (14)', 'Siamese -> Birman (12)', 'Staffordshire Bull Terrier -> American Bulldog (12)', 'Birman -> Siamese (11)']
+[random_forest] n=100 val_acc=0.8356 (fit 0.6s)
+[random_forest] n=300 val_acc=0.8682 (fit 1.6s)
+==> features_random_forest: train_acc=1.0000 val_acc=0.8682 test_acc=0.8256 macroF1=0.8203
+    most confused: ['Ragdoll -> Birman (23)', 'American Pit Bull Terrier -> Staffordshire Bull Terrier (21)', 'American Pit Bull Terrier -> American Bulldog (18)', 'Chihuahua -> Shiba Inu (18)', 'Birman -> Ragdoll (15)']
+
+| Approach | Trainable params | Time (s) | Train acc | Val acc | Test acc | Test macro-F1 |
+|---|---|---|---|---|---|---|
+| full | 1,555,781 | 736.2 | 0.9878 | 0.8750 | 0.8302 | 0.8248 |
+| head | 628,773 | 213.7 | 0.9840 | 0.8791 | 0.8585 | 0.8581 |
+| features_logreg | 0 | 36.9 | 0.9881 | 0.8764 | 0.8569 | 0.8551 |
+| features_linear_svm | 0 | 42.8 | 0.9990 | 0.8750 | 0.8340 | 0.8314 |
+| features_random_forest | 0 | 38.1 | 1.0000 | 0.8682 | 0.8256 | 0.8203 |

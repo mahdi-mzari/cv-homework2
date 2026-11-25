@@ -1,0 +1,398 @@
+{
+  "env": {
+    "torch": "2.14.1+cu126",
+    "torchvision": "0.29.1+cu126",
+    "sklearn": "1.9.1",
+    "numpy": "2.3.0",
+    "seed": 42,
+    "device": "cuda",
+    "deterministic": "cudnn.deterministic=True, use_deterministic_algorithms(warn_only=True)"
+  },
+  "results": [
+    {
+      "approach": "full",
+      "trainable_params": 1555781,
+      "time_s": 554.4526152610779,
+      "lr": 0.0001,
+      "batch_size": 32,
+      "epochs": 20,
+      "best_epoch": 17,
+      "optimizer": "Adam + cosine LR schedule",
+      "loss": "CrossEntropy",
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 3.1622864603996277,
+          "train_acc": 0.22588315217391305,
+          "val_loss": 2.046225366385087,
+          "val_acc": 0.5597826086956522
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.7246880323990532,
+          "train_acc": 0.6226222826086957,
+          "val_loss": 1.0051583259002022,
+          "val_acc": 0.7581521739130435
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.9573122126900632,
+          "train_acc": 0.7496603260869565,
+          "val_loss": 0.6934000849723816,
+          "val_acc": 0.8084239130434783
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.6884897169859513,
+          "train_acc": 0.8118206521739131,
+          "val_loss": 0.5619448358597963,
+          "val_acc": 0.8396739130434783
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.5427348791905071,
+          "train_acc": 0.850203804347826,
+          "val_loss": 0.5065025039341139,
+          "val_acc": 0.8505434782608695
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.4433613562065622,
+          "train_acc": 0.8770380434782609,
+          "val_loss": 0.46223805650420813,
+          "val_acc": 0.8546195652173914
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.38428870086436684,
+          "train_acc": 0.8980978260869565,
+          "val_loss": 0.4530002228591753,
+          "val_acc": 0.8586956521739131
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.32382080687776854,
+          "train_acc": 0.9110054347826086,
+          "val_loss": 0.4131522204564965,
+          "val_acc": 0.873641304347826
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.2889443734741729,
+          "train_acc": 0.921875,
+          "val_loss": 0.4008333708928979,
+          "val_acc": 0.876358695652174
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.26019073512567126,
+          "train_acc": 0.9296875,
+          "val_loss": 0.38914120845172717,
+          "val_acc": 0.876358695652174
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.22625936081875925,
+          "train_acc": 0.943953804347826,
+          "val_loss": 0.3872317619945692,
+          "val_acc": 0.8682065217391305
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.20907561067977679,
+          "train_acc": 0.9493885869565217,
+          "val_loss": 0.3916107448546783,
+          "val_acc": 0.8804347826086957
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.19501698575913906,
+          "train_acc": 0.9500679347826086,
+          "val_loss": 0.3807156992995221,
+          "val_acc": 0.8831521739130435
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.1867063128915818,
+          "train_acc": 0.954483695652174,
+          "val_loss": 0.37902285482572473,
+          "val_acc": 0.8804347826086957
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.17117178274075623,
+          "train_acc": 0.9575407608695652,
+          "val_loss": 0.3794763392728308,
+          "val_acc": 0.876358695652174
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.16901414367653753,
+          "train_acc": 0.9592391304347826,
+          "val_loss": 0.3753843139047208,
+          "val_acc": 0.8817934782608695
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.168840986797991,
+          "train_acc": 0.9619565217391305,
+          "val_loss": 0.3756336569786072,
+          "val_acc": 0.8845108695652174
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.1619229994147368,
+          "train_acc": 0.9616168478260869,
+          "val_loss": 0.37478297171385394,
+          "val_acc": 0.8845108695652174
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.16254255511676488,
+          "train_acc": 0.9612771739130435,
+          "val_loss": 0.3753176707288493,
+          "val_acc": 0.8845108695652174
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.17406577147219493,
+          "train_acc": 0.9578804347826086,
+          "val_loss": 0.37577759766060376,
+          "val_acc": 0.8845108695652174
+        }
+      ],
+      "train_acc": 0.9915081521739131,
+      "val_acc": 0.8845108695652174,
+      "test_acc": 0.8454619787408013,
+      "test_macro_f1": 0.8418838898162052,
+      "top_confusions": [
+        "American Pit Bull Terrier -> Staffordshire Bull Terrier (23)",
+        "American Pit Bull Terrier -> American Bulldog (17)",
+        "Ragdoll -> Birman (15)",
+        "Staffordshire Bull Terrier -> American Bulldog (12)",
+        "Birman -> Ragdoll (11)"
+      ]
+    },
+    {
+      "approach": "head",
+      "trainable_params": 628773,
+      "time_s": 593.5440435409546,
+      "lr": 0.001,
+      "batch_size": 32,
+      "epochs": 20,
+      "best_epoch": 16,
+      "optimizer": "Adam + cosine LR schedule",
+      "loss": "CrossEntropy",
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.250686031644759,
+          "train_acc": 0.6480978260869565,
+          "val_loss": 0.5345155110825663,
+          "val_acc": 0.813858695652174
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.45761989575365314,
+          "train_acc": 0.8468070652173914,
+          "val_loss": 0.4234063236609749,
+          "val_acc": 0.8586956521739131
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.33080986150256964,
+          "train_acc": 0.8933423913043478,
+          "val_loss": 0.4692317765692006,
+          "val_acc": 0.8478260869565217
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.25225331431821635,
+          "train_acc": 0.9252717391304348,
+          "val_loss": 0.4046571196421333,
+          "val_acc": 0.8614130434782609
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.23715635522714126,
+          "train_acc": 0.9235733695652174,
+          "val_loss": 0.41233013861853146,
+          "val_acc": 0.8668478260869565
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.1785771275020164,
+          "train_acc": 0.9412364130434783,
+          "val_loss": 0.4094933251971784,
+          "val_acc": 0.8600543478260869
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.13821912676338916,
+          "train_acc": 0.9561820652173914,
+          "val_loss": 0.37471436061289,
+          "val_acc": 0.876358695652174
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.13379262298669503,
+          "train_acc": 0.9572010869565217,
+          "val_loss": 0.4032420373481253,
+          "val_acc": 0.8654891304347826
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.10842491759230262,
+          "train_acc": 0.9697690217391305,
+          "val_loss": 0.371044789319453,
+          "val_acc": 0.8885869565217391
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.09073625988853366,
+          "train_acc": 0.9765625,
+          "val_loss": 0.3750504297406777,
+          "val_acc": 0.8831521739130435
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.07110157732487372,
+          "train_acc": 0.9799592391304348,
+          "val_loss": 0.3520944921866707,
+          "val_acc": 0.8804347826086957
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.05906564149620902,
+          "train_acc": 0.9847146739130435,
+          "val_loss": 0.36850434946625127,
+          "val_acc": 0.8845108695652174
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.055036206314664174,
+          "train_acc": 0.9867527173913043,
+          "val_loss": 0.34794169146081677,
+          "val_acc": 0.8817934782608695
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.04259507102972787,
+          "train_acc": 0.9925271739130435,
+          "val_loss": 0.33777076394661615,
+          "val_acc": 0.8913043478260869
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.04289192056445324,
+          "train_acc": 0.9911684782608695,
+          "val_loss": 0.3461785384494325,
+          "val_acc": 0.8899456521739131
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.04074578080832472,
+          "train_acc": 0.9942255434782609,
+          "val_loss": 0.3508203826520754,
+          "val_acc": 0.8980978260869565
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.037691355070463665,
+          "train_acc": 0.9904891304347826,
+          "val_loss": 0.3550237352433412,
+          "val_acc": 0.8926630434782609
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.03732634415222413,
+          "train_acc": 0.9918478260869565,
+          "val_loss": 0.3448530607249426,
+          "val_acc": 0.8953804347826086
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.032116065287719604,
+          "train_acc": 0.9942255434782609,
+          "val_loss": 0.344697935587686,
+          "val_acc": 0.8967391304347826
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.03593070414322226,
+          "train_acc": 0.9938858695652174,
+          "val_loss": 0.34295767513306247,
+          "val_acc": 0.8967391304347826
+        }
+      ],
+      "train_acc": 0.9989809782608695,
+      "val_acc": 0.8980978260869565,
+      "test_acc": 0.8691741618969746,
+      "test_macro_f1": 0.8670079834662789,
+      "top_confusions": [
+        "American Pit Bull Terrier -> Staffordshire Bull Terrier (20)",
+        "American Pit Bull Terrier -> American Bulldog (18)",
+        "Ragdoll -> Birman (15)",
+        "British Shorthair -> Russian Blue (13)",
+        "English Cocker Spaniel -> English Setter (13)"
+      ]
+    },
+    {
+      "approach": "features_logreg",
+      "trainable_params": 0,
+      "time_s": 47.11004018783569,
+      "hyperparams": "C=0.01",
+      "scaling": "StandardScaler (fit on train)",
+      "feature_dim": 576,
+      "train_acc": 0.9881114130434783,
+      "val_acc": 0.876358695652174,
+      "test_acc": 0.856909239574816,
+      "test_macro_f1": 0.8550813055606785,
+      "top_confusions": [
+        "American Pit Bull Terrier -> Staffordshire Bull Terrier (18)",
+        "Birman -> Ragdoll (15)",
+        "Ragdoll -> Birman (15)",
+        "American Pit Bull Terrier -> American Bulldog (14)",
+        "English Cocker Spaniel -> English Setter (13)"
+      ]
+    },
+    {
+      "approach": "features_linear_svm",
+      "trainable_params": 0,
+      "time_s": 59.99164271354675,
+      "hyperparams": "C=0.01",
+      "scaling": "StandardScaler (fit on train)",
+      "feature_dim": 576,
+      "train_acc": 0.9989809782608695,
+      "val_acc": 0.875,
+      "test_acc": 0.8340147179067866,
+      "test_macro_f1": 0.8313652231498844,
+      "top_confusions": [
+        "American Pit Bull Terrier -> American Bulldog (17)",
+        "Ragdoll -> Birman (14)",
+        "Siamese -> Birman (12)",
+        "Staffordshire Bull Terrier -> American Bulldog (12)",
+        "Birman -> Siamese (11)"
+      ]
+    },
+    {
+      "approach": "features_random_forest",
+      "trainable_params": 0,
+      "time_s": 52.75571298599243,
+      "hyperparams": "n=300",
+      "scaling": "StandardScaler (fit on train)",
+      "feature_dim": 576,
+      "train_acc": 1.0,
+      "val_acc": 0.8682065217391305,
+      "test_acc": 0.8255655491959663,
+      "test_macro_f1": 0.8203442473845122,
+      "top_confusions": [
+        "Ragdoll -> Birman (23)",
+        "American Pit Bull Terrier -> Staffordshire Bull Terrier (21)",
+        "American Pit Bull Terrier -> American Bulldog (18)",
+        "Chihuahua -> Shiba Inu (18)",
+        "Birman -> Ragdoll (15)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "env": {
+    "torch": "2.14.1+cu126",
+    "torchvision": "0.29.1+cu126",
+    "sklearn": "1.9.1",
+    "numpy": "2.3.0",
+    "seed": 42,
+    "device": "cuda",
+    "deterministic": "cudnn.deterministic=True, use_deterministic_algorithms(warn_only=True)"
+  },
+  "results": [
+    {
+      "approach": "full",
+      "trainable_params": 1555781,
+      "time_s": 736.213515996933,
+      "lr": 0.0001,
+      "batch_size": 32,
+      "epochs": 10,
+      "best_epoch": 10,
+      "optimizer": "Adam",
+      "loss": "CrossEntropy",
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 3.1622864603996277,
+          "val_acc": 0.5597826086956522
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.7217495506224425,
+          "val_acc": 0.7540760869565217
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.9518627206916395,
+          "val_acc": 0.8070652173913043
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.6809096278055854,
+          "val_acc": 0.8396739130434783
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.5324450183821761,
+          "val_acc": 0.8519021739130435
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.4294471705089445,
+          "val_acc": 0.8532608695652174
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.36651161815161293,
+          "val_acc": 0.8573369565217391
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.3002567489671966,
+          "val_acc": 0.8682065217391305
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.26200952664341615,
+          "val_acc": 0.8654891304347826
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.22887727869269642,
+          "val_acc": 0.875
+        }
+      ],
+      "train_acc": 0.9877717391304348,
+      "val_acc": 0.875,
+      "test_acc": 0.8301989642954484,
+      "test_macro_f1": 0.8248226629959222,
+      "top_confusions": [
+        "American Pit Bull Terrier -> Staffordshire Bull Terrier (22)",
+        "American Pit Bull Terrier -> American Bulldog (18)",
+        "American Pit Bull Terrier -> German Shorthaired (18)",
+        "Beagle -> Basset Hound (14)",
+        "Bengal -> Egyptian Mau (12)"
+      ]
+    },
+    {
+      "approach": "head",
+      "trainable_params": 628773,
+      "time_s": 213.6522614955902,
+      "lr": 0.001,
+      "batch_size": 32,
+      "epochs": 10,
+      "best_epoch": 7,
+      "optimizer": "Adam",
+      "loss": "CrossEntropy",
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.2053933282909186,
+          "val_acc": 0.8301630434782609
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.471466614500336,
+          "val_acc": 0.8519021739130435
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.3348071847272956,
+          "val_acc": 0.8614130434782609
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.28533341423810826,
+          "val_acc": 0.8682065217391305
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.21606442437547704,
+          "val_acc": 0.873641304347826
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.18876869506810023,
+          "val_acc": 0.8722826086956522
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.1586200710709976,
+          "val_acc": 0.8790760869565217
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.13259755074977875,
+          "val_acc": 0.876358695652174
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.12945449493987404,
+          "val_acc": 0.875
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.09538265048404751,
+          "val_acc": 0.873641304347826
+        }
+      ],
+      "train_acc": 0.9840353260869565,
+      "val_acc": 0.8790760869565217,
+      "test_acc": 0.8585445625511039,
+      "test_macro_f1": 0.8581180241362285,
+      "top_confusions": [
+        "Birman -> Ragdoll (26)",
+        "American Pit Bull Terrier -> Staffordshire Bull Terrier (24)",
+        "Maine Coon -> Ragdoll (15)",
+        "Siamese -> Birman (15)",
+        "Pug -> Boxer (12)"
+      ]
+    },
+    {
+      "approach": "features_logreg",
+      "trainable_params": 0,
+      "time_s": 36.86201357841492,
+      "hyperparams": "C=0.01",
+      "scaling": "StandardScaler (fit on train)",
+      "feature_dim": 576,
+      "train_acc": 0.9881114130434783,
+      "val_acc": 0.876358695652174,
+      "test_acc": 0.856909239574816,
+      "test_macro_f1": 0.8550813055606785,
+      "top_confusions": [
+        "American Pit Bull Terrier -> Staffordshire Bull Terrier (18)",
+        "Birman -> Ragdoll (15)",
+        "Ragdoll -> Birman (15)",
+        "American Pit Bull Terrier -> American Bulldog (14)",
+        "English Cocker Spaniel -> English Setter (13)"
+      ]
+    },
+    {
+      "approach": "features_linear_svm",
+      "trainable_params": 0,
+      "time_s": 42.84232211112976,
+      "hyperparams": "C=0.01",
+      "scaling": "StandardScaler (fit on train)",
+      "feature_dim": 576,
+      "train_acc": 0.9989809782608695,
+      "val_acc": 0.875,
+      "test_acc": 0.8340147179067866,
+      "test_macro_f1": 0.8313652231498844,
+      "top_confusions": [
+        "American Pit Bull Terrier -> American Bulldog (17)",
+        "Ragdoll -> Birman (14)",
+        "Siamese -> Birman (12)",
+        "Staffordshire Bull Terrier -> American Bulldog (12)",
+        "Birman -> Siamese (11)"
+      ]
+    },
+    {
+      "approach": "features_random_forest",
+      "trainable_params": 0,
+      "time_s": 38.07803535461426,
+      "hyperparams": "n=300",
+      "scaling": "StandardScaler (fit on train)",
+      "feature_dim": 576,
+      "train_acc": 1.0,
+      "val_acc": 0.8682065217391305,
+      "test_acc": 0.8255655491959663,
+      "test_macro_f1": 0.8203442473845122,
+      "top_confusions": [
+        "Ragdoll -> Birman (23)",
+        "American Pit Bull Terrier -> Staffordshire Bull Terrier (21)",
+        "American Pit Bull Terrier -> American Bulldog (18)",
+        "Chihuahua -> Shiba Inu (18)",
+        "Birman -> Ragdoll (15)"
+      ]
+    }
+  ]
+}
